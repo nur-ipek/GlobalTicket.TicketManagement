@@ -3,10 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace GlobalTicket.TicketManagement.Application.Features.Events.Commands.CreateEvent
+namespace GlobalTicket.TicketManagement.Application.Features.Events.Commands.UpdateEvent
 {
-    public  class CreateEventCommand: IRequest<Guid>
+    public class UpdateEventCommand: IRequest
     {
+        public Guid EventId { get; set; }
         public string Name { get; set; }
         public int Price { get; set; }
         public string Artist { get; set; }
@@ -14,9 +15,5 @@ namespace GlobalTicket.TicketManagement.Application.Features.Events.Commands.Cre
         public string Description { get; set; }
         public string ImageUrl { get; set; }
         public Guid CategoryId { get; set; }
-        public override string ToString()
-        {
-            return $"Event name: {Name}; Price: {Price}; By:{Artist}; On:{Date.ToShortDateString()}; Description: {Description}";
-        }
     }
 }
