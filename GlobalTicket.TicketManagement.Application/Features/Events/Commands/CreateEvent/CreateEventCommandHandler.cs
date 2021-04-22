@@ -29,11 +29,11 @@ namespace GlobalTicket.TicketManagement.Application.Features.Events.Commands.Cre
             if (validationResult.Errors.Count > 0)
                 throw new  Exceptions.ValidationException(validationResult);
 
-            var @event = _mapper.Map<Event>(request);
+            var @event = _mapper.Map<Event>(request); //request'ten Event'a gitmek istiyorum.
 
             @event = await _eventRepository.AddAsync(@event);
 
-            return @event.EventId;
+            return @event.EventId; //yeni oluşturduğum olayın Guid'ini geri döndürüyorum.
         }
     }
 }
