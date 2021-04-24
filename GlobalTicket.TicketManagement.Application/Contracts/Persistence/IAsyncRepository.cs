@@ -9,9 +9,9 @@ namespace GlobalTicket.TicketManagement.Application.Contracts.Persistence
     {
         Task<T> GetByIdAsync(Guid id);
         Task<IReadOnlyList<T>> ListAllAsync();
-        Task<T> AddAsync(T Entitiy);
-        Task<T> UpdateAsync(T Entitiy);
-        Task<T> DeleteAsync(T Entity);
+        Task<T> AddAsync(T entity);
+        Task UpdateAsync(T entity);
+        Task DeleteAsync(T entity);
 
 
     }
