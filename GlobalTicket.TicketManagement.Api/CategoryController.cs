@@ -27,6 +27,9 @@ namespace GlobalTicket.TicketManagement.Api
             return Ok(dtos);
         }
         
-      //  public async Task<ActionResult<List<CategoryEventListVm>>> GetCategoriesWithEvents()
+        //public async Task<ActionResult<List<CategoryEventListVm>>> GetCategoriesWithEvents(bool includeHistory)
+        //{
+        //    GetCategoriesListWithEventsQuery getCategoriesListWithEventsQuery = new 
+        //}
     }
 }
